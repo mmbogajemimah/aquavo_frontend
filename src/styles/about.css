@@ -13,7 +13,8 @@
   .about-image {
     flex: 0 0 50%; /* Image takes up 50% of the container */
     max-width: 50%; /* Ensure image doesn't exceed container width */
-    max-height: 40%;
+    height: auto;
+    max-height: 500px;
     margin-right: 20px; /* Add some space between image and text */
     /* margin-left: 20px; */
   }
