@@ -1,0 +1,48 @@
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0; /* Adjust margin as needed */
+  }
+
+  .about-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-image {
+    flex: 0 0 50%; /* Image takes up 50% of the container */
+    max-width: 50%; /* Ensure image doesn't exceed container width */
+    max-height: 40%;
+    margin-right: 20px; /* Add some space between image and text */
+    /* margin-left: 20px; */
+  }
+  
+  .about-description {
+    flex: 0 0 45%; /* Text takes up 50% of the container */
+    margin-right: 20px;
+  }
+  
+  .about-description h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-description p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .about-button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(34, 149, 164);
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    margin-top: 30px;
+  }
+  
