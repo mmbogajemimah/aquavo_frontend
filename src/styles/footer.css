@@ -1,0 +1,35 @@
+.footer-section {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.footer-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-images img {
+    width: 250px;
+    height: 150px;
+    max-height: 300px;
+}
+
+.footer-descriptions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-desc h6 {
+    color: rgb(62, 71, 249);
+    font-size: 0.9rem;
+}
+
+.footer-desc p {
+    color: rgb(91, 91, 91);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
