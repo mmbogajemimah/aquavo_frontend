@@ -1,6 +1,6 @@
 import React from "react";
 import AquavoLogo from '../../images/aquavo_logo.svg';
-import '../../styles/navigationbar.css'; // Import CSS file directly
+import '../../styles/home/navigationbar.css'; // Import CSS file directly
 
 function NavigationBar() {
     return(

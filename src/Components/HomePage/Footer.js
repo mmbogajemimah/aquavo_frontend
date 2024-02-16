@@ -2,7 +2,7 @@ import React from 'react';
 import GlassWater from '../../images/banner.jpg';
 import Droplet from '../../images/droplet.jpg';
 import Fountain from '../../images/fountain.jpg'
-import '../../styles/footer.css';
+import '../../styles/home/footer.css';
 
 function Footer() {
   return (

@@ -13,10 +13,12 @@
 }
 
 .footer-images img {
-    width: 250px;
-    height: 150px;
-    max-height: 300px;
+    width: 100%; /* Use 100% of the container's width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 250px; /* Limit maximum width to 250px */
+    max-height: 150px; /* Limit maximum height to 150px */
 }
+
 
 .footer-descriptions {
     display: flex;

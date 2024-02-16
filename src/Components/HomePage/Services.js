@@ -2,7 +2,7 @@ import React from 'react';
 import DropletImage from '../../images/droplet.jpg';
 import WaterTasting from '../../images/banner.jpg';
 import AfterServices from '../../images/fountain2.jpg';
-import '../../styles/services.css';
+import '../../styles/home/services.css';
 
 function Services() {
   return (
