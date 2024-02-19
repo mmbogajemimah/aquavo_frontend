@@ -52,6 +52,8 @@
     color: #fff;
     cursor: pointer;
     font-size: 1.1rem;
+    margin-top: 1.1rem;
+    font-weight: bold;
   }
   
   .btn-signup:hover {
