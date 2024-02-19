@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AquavoLogo from '../../images/aquavo_logo.svg';
 import '../../styles/home/navigationbar.css'; // Import CSS file directly
 
@@ -15,8 +16,8 @@ function NavigationBar() {
                         <li className="nav-item">About Us</li>
                         <li className="nav-item">Services</li>
                         <li className="nav-item">Contact</li>
-                        <li className="nav-item">Sign In</li>
-                        <li className="nav-item">Sign Up</li>
+                        <li className="nav-item"><Link to="/login">Sign In</Link></li>
+                        <li className="nav-item"><Link to="/registration">Sign Up</Link></li>
                     </ul>
                 </div>
             </nav>

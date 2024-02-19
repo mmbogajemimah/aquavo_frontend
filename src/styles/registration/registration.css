@@ -1,0 +1,71 @@
+.registration-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 5px;
+  }
+  
+  .form-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #454545;
+  }
+
+  .login-link {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #747474;
+  }
+
+  .login-link a {
+    text-decoration: none;
+    color: #002347;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .registration-form label {
+    margin-bottom: 5px;
+    font-size: larger;
+  }
+  
+  .form-control {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .btn-signup {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #014287;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  .btn-signup:hover {
+    background-color: #0350a1;
+  }
+  
+  .login-link {
+    margin-top: 20px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .registration-form-container {
+      width: 90%;
+    }
+  }
+  
