@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/registration/registration.css';
+import '../../styles/authentication/registration.css';
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
