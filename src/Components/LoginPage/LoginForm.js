@@ -2,38 +2,69 @@ import React, { useState } from 'react';
 import '../../styles/authentication/login.css';
 
 function LoginForm() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
   }
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Email:", email);
+    console.log("Username:", username);
     console.log("Password:", password);
+  
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/accounts/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
+      
+      if (response.ok) {
+        // Login Successful, handle success
+        console.log('Login was Successful')
+        const data = await response.json()
+        const token = data.token;
+        // Save the token to local storage or session storage
+        localStorage.setItem('token', token)
+      } else {
+        // Login Failed, handle error
+        const data = await response.json();
+        setError(data.error);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setError('An unexpected error occurred');
+    }
     // Reset the Form after Submission
-    setEmail('');
-    setPassword('')
-  }
+    // setEmail('');
+    // setPassword('')
+  };
 
 
   return (
     <div className='login-container'>
       <h1 className='login-header'>Login</h1>
+      {error && <p className='error'>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
-          <label className="label-text" htmlFor='email'>Email:</label>
+          <label className="label-text" htmlFor='username'>Username:</label>
           <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
+            type="username"
+            id="username"
+            value={username}
+            onChange={handleUsernameChange}
             required
             className='form-control'
             placeholder='Email Address'

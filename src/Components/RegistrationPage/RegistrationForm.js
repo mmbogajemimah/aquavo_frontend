@@ -28,7 +28,7 @@ function RegistrationForm() {
 
       if (response.ok) {
         // Registration successful, redirect or display a success message
-        console.log('Registration successful');
+        console.log('Registration is successful');
       } else {
         // Registration failed, handle error
         console.error('Registration failed');
