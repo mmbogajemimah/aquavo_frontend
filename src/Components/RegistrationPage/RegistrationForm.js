@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 import '../../styles/authentication/registration.css';
 
 function RegistrationForm() {
+
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -29,6 +33,9 @@ function RegistrationForm() {
       if (response.ok) {
         // Registration successful, redirect or display a success message
         console.log('Registration is successful');
+        alert("Your Account has been Created Successfully. You will be Redirected to the Login Page");
+        // Redirect to the login page
+        navigate('/login');
       } else {
         // Registration failed, handle error
         console.error('Registration failed');

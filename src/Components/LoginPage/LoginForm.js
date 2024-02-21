@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/authentication/login.css';
+import { Link } from 'react-router-dom';
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -56,6 +57,7 @@ function LoginForm() {
   return (
     <div className='login-container'>
       <h1 className='login-header'>Login</h1>
+      <p className='register-link'>Not Registered? <Link to='/registration'>SignUp</Link></p>
       {error && <p className='error'>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className='form-group'>

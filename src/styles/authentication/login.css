@@ -61,3 +61,14 @@ label {
 .login-btn:hover {
     background-color: #0260c4;
 }
+
+.register-link {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: rgb(109, 109, 109);
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #002347;
+}
