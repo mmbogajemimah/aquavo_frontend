@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import '../../styles/authentication/login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginForm() {
+
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -39,6 +42,8 @@ function LoginForm() {
         const token = data.token;
         // Save the token to local storage or session storage
         localStorage.setItem('token', token)
+        // Navigate User to Customers Page
+        navigate('/customers');
       } else {
         // Login Failed, handle error
         const data = await response.json();
