@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import '../../styles/customers/customer-list.css'
 
@@ -39,7 +40,8 @@ function CustomerList() {
 
   return (
     <div className='customer-list-container'>
-      <h2 className='page-title'>Customer List</h2>
+      <h2 className='page-title'>Regular Customers List</h2>
+      <Link to="/dashboard" className='back-button'>Back to Dashboard</Link>
       <input 
         type="text"
         placeholder="Search by name, email, phone_number"
@@ -64,9 +66,9 @@ function CustomerList() {
             <tr key={customer.id}>
               <td>{customer.username}</td>
               <td>{customer.email}</td>
-              <td>{customer.phone}</td>
+              <td>{customer.phone_no}</td>
               <td>{customer.estate}</td>
-              <td>{customer.houseNumber}</td>
+              <td>{customer.house_number}</td>
               <td>{customer.is_shop_owner ? 'Yes' : 'No'}</td>
               <td>
                 <div className='button-conntainer'>
@@ -79,7 +81,8 @@ function CustomerList() {
           ))}
         </tbody>
       </table>
-      <button className='btn-add'>Add Customer</button>
+      <Link to="/create-customer" className='btn-add'>Add Customer</Link>
+      
     </div>
   )
 }
