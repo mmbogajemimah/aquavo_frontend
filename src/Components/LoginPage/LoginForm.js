@@ -43,7 +43,7 @@ function LoginForm() {
         // Save the token to local storage or session storage
         localStorage.setItem('token', token)
         // Navigate User to Customers Page
-        navigate('/customers');
+        navigate('/dashboard');
       } else {
         // Login Failed, handle error
         const data = await response.json();
