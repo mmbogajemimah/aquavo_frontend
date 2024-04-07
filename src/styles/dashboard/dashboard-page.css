@@ -1,0 +1,33 @@
+.dashboard {
+    display: flex;
+}
+
+/* Dashboard.css */
+.sidebar {
+    width: 200px;
+    background: linear-gradient(to bottom, #006994, #005b80); /* Gradient background */
+    color: #fff;
+    padding-top: 20px;
+    height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
+  }
+  
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
