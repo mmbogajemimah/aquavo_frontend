@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Registration from './Registration';
 import Customer from './Customer';
 import Dashboard from './Dashboard';
-import AddCustomerPage from './Components/CustomerPage/AddCustomerPage';
+// import AddCustomerPage from './Components/CustomerPage/AddCustomerPage';
+import AddCustomer from './AddCustomer';
 // import { ReactDOM } from 'react';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path='/customers' element={<Customer />}/>
           <Route path='/dashboard' element={<Dashboard />}/>
-          <Route path='/create-customer' element={<AddCustomerPage />} />
+          <Route path='/create-customer' element={<AddCustomer />} />
         </Routes>
     </Router>
   )

@@ -52,13 +52,25 @@
     color: #fff;
   }
   
-  .btn-add {
-    background-color: #5b7ea4;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    margin-top: 20px;
-  }
+  /* Style for the Add Customer link */
+.btn-add {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5b7ea4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #61966d;
+  opacity: 0.8;
+}
+
   
   .btn-view {
     background-color: #61966d;

@@ -41,7 +41,7 @@ function CustomerList() {
   return (
     <div className='customer-list-container'>
       <h2 className='page-title'>Regular Customers List</h2>
-      <Link to="/dashboard" className='back-button'>Back to Dashboard</Link>
+      <Link to="/dashboard" className='back-button'>« Back</Link>
       <input 
         type="text"
         placeholder="Search by name, email, phone_number"
@@ -71,7 +71,7 @@ function CustomerList() {
               <td>{customer.house_number}</td>
               <td>{customer.is_shop_owner ? 'Yes' : 'No'}</td>
               <td>
-                <div className='button-conntainer'>
+                <div className='button-container'>
                   <button className='btn-view'>View</button>
                   <button className='btn-update'>Update</button>
                   {/* <button className='btn-delete' onClick={() => handleDeleteCustomer(customer.id)}>Delete</button> */}
