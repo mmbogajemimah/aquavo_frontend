@@ -33,6 +33,7 @@ function UpdateUserPage() {
         const headers = {
           'Authorization' : `Token ${token}`
         };
+        
         console.log('Fetching user data for user ID:', userId);
         const response = await axios.get(`http://127.0.0.1:8000/api/accounts/user_by_id/${userId}`, {headers});
         console.log('Fetched user data:', response.data);
