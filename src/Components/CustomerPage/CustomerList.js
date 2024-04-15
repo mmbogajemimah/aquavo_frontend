@@ -73,7 +73,8 @@ function CustomerList() {
               <td>
                 <div className='button-container'>
                   <button className='btn-view'>View</button>
-                  <button className='btn-update'>Update</button>
+                  <Link to={`/update_user_by_id/${customer.id}/`} className='btn-update'>Update</Link>
+                
                   {/* <button className='btn-delete' onClick={() => handleDeleteCustomer(customer.id)}>Delete</button> */}
                 </div>
               </td>
