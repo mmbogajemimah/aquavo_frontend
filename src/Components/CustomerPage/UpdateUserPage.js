@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../../styles/customers/updateuserpage.css';
+import RegNavBar from '../../Components/RegistrationPage/RegNavBar';
+
 
 function UpdateUserPage() {
   // useParams(): Retrives the userId parameter from the URL.
@@ -33,7 +35,7 @@ function UpdateUserPage() {
         const headers = {
           'Authorization' : `Token ${token}`
         };
-        
+
         console.log('Fetching user data for user ID:', userId);
         const response = await axios.get(`http://127.0.0.1:8000/api/accounts/user_by_id/${userId}`, {headers});
         console.log('Fetched user data:', response.data);
@@ -76,7 +78,9 @@ function UpdateUserPage() {
 
 
   return (
-    <div className='update-user-container'>
+    <>
+      <RegNavBar />
+      <div className='update-user-container'>
       <h2>Update User</h2>
       <form className='update-user-form' onSubmit={handleSubmit}>
           <input type="text" name="first_name" placeholder='First Name' value={formData.first_name} onChange={handleChange} />
@@ -91,6 +95,8 @@ function UpdateUserPage() {
           <button type="submit">Update User</button>
       </form>
     </div>
+    </>
+   
   )
 }
 
