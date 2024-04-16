@@ -9,6 +9,7 @@ import Dashboard from './Dashboard';
 // import AddCustomerPage from './Components/CustomerPage/AddCustomerPage';
 import AddCustomer from './AddCustomer';
 import UpdateUserPage from './Components/CustomerPage/UpdateUserPage';
+import UserProfilePage from './Components/CustomerPage/UserProfilePage';
 // import { ReactDOM } from 'react';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/create-customer' element={<AddCustomer />} />
           <Route path='/update_user_by_id/:userId/' element={<UpdateUserPage />} />
+          <Route path='/user_by_id/:userId/' element={<UserProfilePage />} />
         </Routes>
     </Router>
   )
