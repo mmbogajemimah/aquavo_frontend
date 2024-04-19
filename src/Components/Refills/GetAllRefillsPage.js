@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../../styles/refills/getallrefills.css';
 
 function GetAllRefillsPage() {
@@ -40,18 +41,37 @@ function GetAllRefillsPage() {
     return `${day}/${month}/${year}`;
 };
 
-  if (loading) {
-    return <div>Loading ...</div>
-  }
+//   const updateRefill = async (refill_id, updatedData) => {
+//     try {
+//         const token = localStorage.getItem('token');
+//         const headers = {
+//             'Authorization': `Token ${token}`
+//         }
+//         const response = await axios.patch(`http://127.0.0.1:8000/api/refills/update_refills/${refill_id}`, updatedData, { headers });
+//         // Update the state with the updated refill data
+//         setRefills((prevRefills) => prevRefills.map((refill) => {
+//             if (refill.id === refill_id) {
+//                 return { ...refill, ...response.data };
+//             }
+//             return refill;
+//         }));
+//     } catch (error) {
+//         console.error('Error Updating Refill:', error);
+//     }
+//   };
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+//   if (loading) {
+//     return <div>Loading ...</div>
+//   }
+
+//   if (error) {
+//     return <div>Error: {error.message}</div>;
+//   }
 
   return (
     <div className='container'>
       <h2 className='header'>All Refills</h2>
-      <table className='table' border='1'>
+      <table className='table' >
         <thead>
             <tr>
                 <th>ID</th>
@@ -72,7 +92,8 @@ function GetAllRefillsPage() {
                     <td>{formatDate(refill.created_at)}</td>
                     <td className='action-buttons'>
                         <button className='delete-action-button'>Delete</button>
-                        <button className='update-action-button'>Update</button>
+                        {/* <button className='update-action-button'>Update</button> */}
+                        <Link to={`/update_refill/${refill.id}/`} className='update-action-button'>Update</Link>
                     </td>
                 </tr>
             ))}
