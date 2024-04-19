@@ -10,6 +10,8 @@ import Dashboard from './Dashboard';
 import AddCustomer from './AddCustomer';
 import UpdateUserPage from './Components/CustomerPage/UpdateUserPage';
 import UserProfilePage from './Components/CustomerPage/UserProfilePage';
+import GetAllRefillsPage from './Components/Refills/GetAllRefillsPage';
+import UpdateRefillPage from './Components/Refills/UpdateRefillPage';
 // import { ReactDOM } from 'react';
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path='/create-customer' element={<AddCustomer />} />
           <Route path='/update_user_by_id/:userId/' element={<UpdateUserPage />} />
           <Route path='/user_by_id/:userId/' element={<UserProfilePage />} />
+          <Route path='/refills/' element={<GetAllRefillsPage />} />
+          <Route path='/update_refill/:refill_id/' element={<UpdateRefillPage />} />
         </Routes>
     </Router>
   )
