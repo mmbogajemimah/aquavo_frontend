@@ -1,0 +1,67 @@
+/* updaterefill.css */
+
+.update-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+}
+
+.update-form {
+    margin-top: 20px;
+}
+
+.update-form-group {
+    margin-bottom: 25px;
+}
+
+.update-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+.update-input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    text-align: center; /* Add this line */
+    transition: border-bottom 0.3s ease;
+}
+
+.update-input::placeholder {
+    color: #aaa;
+}
+
+.update-button {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+
+.update-button-container {
+    text-align: center;
+}
