@@ -74,6 +74,21 @@ function UpdateRefillPage() {
     return <div>Error: {error.message}</div>
   }
 
+  const handleDelete = async () => {
+    try {
+      const headers = {
+        'Authorization': `Token ${localStorage.getItem('token')}`,
+      };
+
+      await axios.delete(`http://127.0.0.1:8000/api/refills/delete_refills/${refill_id}/`, {headers});
+      console.log("Refill Details deleted Successfully");
+
+      navigate('/refills')
+    } catch (error) {
+      console.error ('Error Deleting Refill Details');
+    }
+  }
+
   return (
     <div className='update-container'>
       <h1 className='update-header'>Update Refill</h1>
@@ -93,8 +108,9 @@ function UpdateRefillPage() {
             <input className='update-input' type='number' name='amount_money' value={refill.amount_money} onChange={handleChange} required/>
         </div>
 
-        <div className='update-button-container'>
+        <div className='buttons-container'>
           <button type='submit' className='update-button'>Update</button>
+          <button onClick={handleDelete} className='delete-action-button'>Delete</button>
         </div>
       </form>
     </div>
