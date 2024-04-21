@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import '../../styles/refills/getallrefills.css';
 
 function GetAllRefillsPage() {
@@ -8,7 +8,6 @@ function GetAllRefillsPage() {
   const [refills, setRefills] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
 
   // Fetch all Refills when the component Mounts
   useEffect(() => {
@@ -39,7 +38,7 @@ function GetAllRefillsPage() {
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
-};
+  };
 
   return (
     <div className='container'>
@@ -64,9 +63,9 @@ function GetAllRefillsPage() {
                     <td>{refill.amount_money}</td>
                     <td>{formatDate(refill.created_at)}</td>
                     <td className='action-buttons'>
-                        <button className='delete-action-button'>Delete</button>
                         {/* <button className='update-action-button'>Update</button> */}
-                        <Link to={`/update_refill/${refill.id}/`} className='update-action-button'>Update</Link>
+                        <Link to={`/update_refill/${refill.id}/`} className='update-action-button'>View</Link>
+                        {/* <Link onClick={handleDelete} className='delete-action-button'>Delete</Link> */}
                     </td>
                 </tr>
             ))}
