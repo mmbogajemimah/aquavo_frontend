@@ -56,10 +56,12 @@
 
 .delete-action-button {
     background-color: rgb(253, 66, 66);
+    text-decoration: none;
 }
 
 .update-action-button {
     background-color: #4CAF50;
+    text-decoration: none;
 }
 
 .delete-action-button:hover {
