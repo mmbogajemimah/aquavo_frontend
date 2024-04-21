@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import '../../styles/refills/updaterefill.css';
 
 function UpdateRefillPage() {
   const { refill_id } = useParams()
@@ -74,25 +75,27 @@ function UpdateRefillPage() {
   }
 
   return (
-    <div className='container'>
-      <h1 className='header'>Update Refill</h1>
-      <form onSubmit={handleSubmit}>
-      <div>
-            <label>User Name:</label>
-            <input type='string' name='user_name' value={refill.username} onChange={handleChange} required/>
+    <div className='update-container'>
+      <h1 className='update-header'>Update Refill</h1>
+      <form className='update-form' onSubmit={handleSubmit}>
+        <div className='update-form-group'>
+            <label className='update-label'>User Name:</label>
+            <input className='update-input' type='string' name='user_name' value={refill.username} onChange={handleChange} required/>
         </div>
 
-        <div>
-            <label>Amount Liters:</label>
-            <input type='number' name='amount_liters' value={refill.amount_liters} onChange={handleChange} required/>
+        <div className='update-form-group'>
+            <label className='update-label'>Amount Liters:</label>
+            <input className='update-input' type='number' name='amount_liters' value={refill.amount_liters} onChange={handleChange} required/>
         </div>
 
-        <div>
-            <label>Amount Money:</label>
-            <input type='number' name='amount_money' value={refill.amount_money} onChange={handleChange} required/>
+        <div className='update-form-group'>
+            <label className='update-label'>Amount Money:</label>
+            <input className='update-input' type='number' name='amount_money' value={refill.amount_money} onChange={handleChange} required/>
         </div>
 
-        <button type='submit'>Update</button>
+        <div className='update-button-container'>
+          <button type='submit' className='update-button'>Update</button>
+        </div>
       </form>
     </div>
   )
