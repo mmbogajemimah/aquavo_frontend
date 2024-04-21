@@ -11,7 +11,7 @@ function UpdateRefillPage() {
   });
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null);
-  const [refillData, setRefillData] = useState(null)
+  // const [refillData, setRefillData] = useState(null)
   const navigate = useNavigate();
 
   // Fetch the original refill data when the component mounts
