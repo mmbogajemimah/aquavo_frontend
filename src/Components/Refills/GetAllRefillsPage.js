@@ -41,33 +41,6 @@ function GetAllRefillsPage() {
     return `${day}/${month}/${year}`;
 };
 
-//   const updateRefill = async (refill_id, updatedData) => {
-//     try {
-//         const token = localStorage.getItem('token');
-//         const headers = {
-//             'Authorization': `Token ${token}`
-//         }
-//         const response = await axios.patch(`http://127.0.0.1:8000/api/refills/update_refills/${refill_id}`, updatedData, { headers });
-//         // Update the state with the updated refill data
-//         setRefills((prevRefills) => prevRefills.map((refill) => {
-//             if (refill.id === refill_id) {
-//                 return { ...refill, ...response.data };
-//             }
-//             return refill;
-//         }));
-//     } catch (error) {
-//         console.error('Error Updating Refill:', error);
-//     }
-//   };
-
-//   if (loading) {
-//     return <div>Loading ...</div>
-//   }
-
-//   if (error) {
-//     return <div>Error: {error.message}</div>;
-//   }
-
   return (
     <div className='container'>
       <h2 className='header'>All Refills</h2>
