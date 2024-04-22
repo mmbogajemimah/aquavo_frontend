@@ -63,14 +63,16 @@ function GetAllRefillsPage() {
                     <td>{refill.amount_money}</td>
                     <td>{formatDate(refill.created_at)}</td>
                     <td className='action-buttons'>
-                        {/* <button className='update-action-button'>Update</button> */}
                         <Link to={`/update_refill/${refill.id}/`} className='update-action-button'>View</Link>
-                        {/* <Link onClick={handleDelete} className='delete-action-button'>Delete</Link> */}
                     </td>
                 </tr>
             ))}
         </tbody>
       </table>
+      <div className='create-button-div'>
+        <Link to={`/create_refill/`} className='create-refill-button' >Create Refill</Link>
+      </div>
+      
     </div>
   )
 }
