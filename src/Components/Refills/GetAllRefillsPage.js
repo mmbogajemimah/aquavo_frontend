@@ -20,6 +20,7 @@ function GetAllRefillsPage() {
 
             const response = await axios.get('http://127.0.0.1:8000/api/refills/all_refills/', {headers});
             setRefills(response.data.data);
+            console.log(response.data.data)
             setLoading(false);
         } catch (err) {
             setError(err);
@@ -47,7 +48,8 @@ function GetAllRefillsPage() {
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Customer UserName</th>
+                <th>Vendor Username</th>
+                <th>Customer Username</th>
                 <th>Amount Liters</th>
                 <th>Amount Money</th>
                 <th>Refill date</th>
@@ -59,6 +61,7 @@ function GetAllRefillsPage() {
                 <tr key={refill.id}>
                     <td>{index + 1}</td>
                     <td>{refill.customer.username}</td>
+                    <td></td>
                     <td>{refill.amount_liters}</td>
                     <td>{refill.amount_money}</td>
                     <td>{formatDate(refill.created_at)}</td>
