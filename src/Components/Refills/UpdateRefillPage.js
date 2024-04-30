@@ -31,6 +31,7 @@ function UpdateRefillPage() {
                 username: data.customer.username,
                 amount_liters: data.amount_liters,
                 amount_money: data.amount_money,
+                customer_refilling: data.customer_refilling,
             });
 
             setLoading(false);
@@ -95,7 +96,7 @@ function UpdateRefillPage() {
       <form className='update-form' onSubmit={handleSubmit}>
         <div className='update-form-group'>
             <label className='update-label'>User Name:</label>
-            <input className='update-input' type='string' name='user_name' value={refill.username} onChange={handleChange} required/>
+            <input className='update-input' type='string' name='user_name' value={refill.customer_refilling} onChange={handleChange} required/>
         </div>
 
         <div className='update-form-group'>
