@@ -3,6 +3,7 @@ import '../../styles/dashboard/dashboard-page.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import GraphComponent from './GraphComponent';
+import RefillGraphComponent from './RefillGraphComponent';
 
 function DashboardPage() {
   const [totalUsers, setTotalUsers] = useState(0);
@@ -40,6 +41,10 @@ function DashboardPage() {
             <p>{totalUsers}</p>
           </div>
           <GraphComponent />
+        </div>
+
+        <div>
+          <RefillGraphComponent />
         </div>
       </div>
     </div>
